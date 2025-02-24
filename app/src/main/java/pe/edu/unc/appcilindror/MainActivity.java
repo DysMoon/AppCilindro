@@ -15,7 +15,7 @@ import Models.Cilindro;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtRadio, txtAltura;
-    TextView txtVolumen;
+    TextView lbVolumen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //Inicializar los objetos(visuales)
         txtRadio = findViewById(R.id.txtRadio);
         txtAltura = findViewById(R.id.txtAltura);
-        txtVolumen = findViewById(R.id.lbVolumen);
-        txtVolumen.setText("");
+        lbVolumen = findViewById(R.id.lbVolumen);
+        lbVolumen.setText("");
 
 
     }
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         double radio = Double.valueOf(txtRadio.getText().toString());
         double altura = Double.valueOf(txtAltura.getText().toString());
         Cilindro oc= new Cilindro(radio,altura);
-        txtVolumen.setText(oc.toString());
+        lbVolumen.setText(oc.toString());
     }
 
     private boolean validar() {
